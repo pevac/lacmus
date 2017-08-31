@@ -1,0 +1,39 @@
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+
+
+    th {
+      font-size: 16px;
+      background-color: #199EF2;
+    }
+
+    th, td {
+      padding: 5px 10px;
+      border: 1px solid;
+      text-align: center;
+    }
+
+    tbody>tr {
+      background-color: white;
+      &:hover,  {
+        background-color: lightskyblue;
+      }
+    }
+
+    .collapse-padding{
+      padding: 0;
+    }
+  }
+
+
+  .controls-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  
+
+
+

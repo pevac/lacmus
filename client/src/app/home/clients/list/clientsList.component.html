@@ -1,0 +1,33 @@
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Phone</th>
+				<th>Birth Day</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let client of clients | paginate: { itemsPerPage: itemsPerPage, currentPage: page, totalItems: totalItems }">
+				<td>{{client.name}}</td>
+				<td>{{client.phone}}</td>
+				<td>{{client.fullBirthDay  | date: "dd/MM/yyyy"}}</td>
+				<td>
+					<a class="btn btn-primary" (click)="goToForm(client, 'update')"><span class="glyphicon glyphicon-pencil"></span></a>
+					<a class="btn btn-default btn-danger" (click)="deleteClient(client)"><span class="glyphicon glyphicon-trash"></span></a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<a class="btn btn-default" (click)="goToForm(null, 'create')">New client</a>
+	<div class="controls-container">
+		<pagination-controls 
+			(pageChange) = "page =$event; getClients($event)" 
+			maxSize = "7"
+			directionLinks = "true"
+			autohide = "true"
+		></pagination-controls>
+	</div>
+	
+	
+	

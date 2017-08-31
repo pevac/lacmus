@@ -1,0 +1,10 @@
+import "@angular/platform-browser";
+import "@angular/platform-browser-dynamic";
+import "@angular/core";
+import "@angular/common";
+import "@angular/http";
+import "@angular/forms";
+import "@uirouter/angular";
+import "ngx-pagination";
+import "angular-date-value-accessor";
+import "rxjs";
