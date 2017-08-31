@@ -40,7 +40,7 @@ export class ClientsResourcesService {
   private jwt() {
     let user = JSON.parse(localStorage.getItem("user"));
     if (user && user.token) {
-        let hd = new Headers({ Authorization: "Basic sdfsdf" });
+        let hd = new Headers({ Authorization: user.token });
         return new RequestOptions({ headers: hd });
     }
   }

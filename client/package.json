@@ -35,11 +35,11 @@
     "@angular/platform-browser-dynamic": "~2.4.10",
     "@angular/router": "~3.4.10",
     "@uirouter/angular": "1.0.0-beta.5",
-    "angular-date-value-accessor": "^0.0.2",
+    "angular-date-value-accessor": "~0.0.2",
     "bootstrap-sass": "^3.3.7",
     "core-js": "~2.4.1",
     "ngx-bootstrap": "^1.9.1",
-    "ngx-pagination": "^3.0.1",
+    "ngx-pagination": "~3.0.1",
     "rxjs": "~5.4.2",
     "zone.js": "~0.7.4"
   },

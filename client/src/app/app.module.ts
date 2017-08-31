@@ -11,13 +11,13 @@ import { NoContentComponent } from "./no-content";
 import { ROUTES } from "./app.routes";
 import { HomeModule } from "./home";
 import { LoginModule } from "./login";
-import { ClientsResourcesService } from "./services/clients.resources.service";
+import { AuthenticationService, ClientsResourcesService } from "./services";
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, HttpModule, CommonModule, NgxPaginationModule,
-    DateValueAccessorModule, ReactiveFormsModule, HomeModule, LoginModule,
+    DateValueAccessorModule,  HomeModule, LoginModule,
     UIRouterModule.forRoot({ states: ROUTES, useHash: true, otherwise: { state: "login", params: {} }}) ],
-  providers: [ ClientsResourcesService ],
+  providers: [ ClientsResourcesService, AuthenticationService ],
   declarations: [ AppComponent, NoContentComponent ],
   bootstrap: [ AppComponent ],
 })

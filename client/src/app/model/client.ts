@@ -26,7 +26,7 @@ export class  ClientResponce extends Client {
         super(client);
         this.birthYear = new Date(client.fullBirthDay).getFullYear();
         this.birthMonth = new Date(client.fullBirthDay).getMonth();
-        this.birthDay = new Date(client.fullBirthDay).getDate();
+        this.birthDay = new Date(client.fullBirthDay).getDay();
     }
 }
 
@@ -36,7 +36,7 @@ export class  ClientForm extends Client {
         if( client != null ) {
             super(client);
             this.fullBirthDay = client.birthYear&&client.birthMonth&&client.birthDay ?
-                new Date(`${client.birthYear}-${client.birthMonth}-${client.birthDay}`) : null;
+                new Date(client.birthYear,client.birthMonth,client.birthDay) : null;
         }
     }
 }
